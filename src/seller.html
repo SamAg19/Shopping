@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wridth=device-wridth, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Home: Ether Store</title>
+  </head>
+  <body style="background-color: black">
+    <br>
+    <div class="container jumbotron" style="padding: 5em; background-color:#dbdbdb; background: rgba(255, 255, 255, 0.7);">
+        <div class="shadow p-3 mb-5 bg-white rounded" style="opacity: 1;">
+        <div class="row" style="padding: 1em;">
+          <h1 class="text-center">Your Items</h1>
+		</div>
+        <div id="loader">
+          <p class="text-center">Loading...</p>
+        </div>
+        <div id="content">
+		      <table class="table">
+		        <thead>
+		          <tr>
+		            <th scope="col">ID</th>
+		            <th scope="col">Item Name</th>
+		            <th scope="col">Price</th>
+					<th scope="col">Seller</th>
+					<th scope="col">Sold To</th>
+		          </tr>
+		        </thead>
+		        <tbody id="items">
+		        </tbody>
+		      </table>
+		      <hr/>
+        </div>
+		<p>  </p>
+		<a href="index.html">
+			<button class="btn btn-primary btn-lg">Back</button><br>
+		</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+<!-- Footer Elements -->
+<!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background: rgba(0,0,0,0.5); color:#FFFFFF;">Blockchain Based store
+        <div>
+            <p id="accountAddress" class="text-center"></p>
+        </div>
+    </div>
+<!-- Copyright -->
+    </footer>
+<!-- Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app4.js"></script>
+  </body>
+</html>

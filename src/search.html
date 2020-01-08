@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wridth=device-wridth, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Home: Ether Store</title>
+  </head>
+  <body style="background-color: black">
+    <br>
+    <div class="container jumbotron" style="padding: 5em; background-color:#dbdbdb; background: rgba(255, 255, 255, 0.7);">
+        <div class="shadow p-3 mb-5 bg-white rounded" style="opacity: 1;">
+			<button class="btn btn-secondary btn-block btn-lg btn-id">Search by ID</button><br>
+			<button class="btn btn-secondary btn-block btn-lg btn-name">Search by Name</button><br>
+			<div id = "ByID">
+				<form onSubmit = "App.SearchByID(); return false">
+					<div class="form-group">
+              			<div class="input-group">
+                			<input id="SearchByid" class="form-control input-lg" type="number" name="number" value="1" min="1" pattern="[0-100000000000]">
+                			</input>
+                			<span class="input-group-btn">
+                  				<button type="submit" class="btn btn-primary btn-lg">Search</button>
+                			</span>
+              			</div>
+            		</div>
+          		</form>
+			</div>
+			<div id = "ByName">
+				<p>Enter the name of the item you want to search</p>
+				<form onSubmit = "App.SearchByName(); return false">
+					<div class="form-group">
+              			<div class="input-group">
+                			<input id="ItemName" class="form-control input-lg" type="text" name="ItemName">
+                			</input>
+                			<span class="input-group-btn">
+                  				<button type="submit" class="btn btn-primary btn-lg">Search</button>
+                			</span>
+              			</div>
+            		</div>
+          		</form>
+			</div>
+			<div id="content">
+		      	<table class="table">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">ID</th>
+		            		<th scope="col">Item Name</th>
+		            		<th scope="col">Price</th>
+							<th scope="col">Stock</th>
+							<th scope="col">Seller</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody id="items">
+		        	</tbody>
+		      	</table>
+		      	<hr/>
+        	</div>
+			<p>  </p>
+			<a href="store.html">
+				<button class="btn btn-primary btn-lg">Back</button><br>
+			</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+<!-- Footer Elements -->
+<!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background: rgba(0,0,0,0.5); color:#FFFFFF;">Blockchain Based store
+        <div>
+            <p id="accountAddress" class="text-center"></p>
+        </div>
+    </div>
+<!-- Copyright -->
+    </footer>
+<!-- Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app3.js"></script>
+  </body>
+</html>

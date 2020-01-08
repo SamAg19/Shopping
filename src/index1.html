@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wridth=device-wridth, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  .form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+  }
+  </style>
+  <body style="background-color: black">
+    <br>
+    <div class="container jumbotron" style="padding: 5em; background-color:#dbdbdb; background: rgba(255, 255, 255, 0.7);">
+        <div class="shadow p-3 mb-5 bg-white rounded" style="opacity: 1;">
+            <div class="row" style="padding: 1em;">
+                <h1 class="display-3">Welcome to the store!</h1>
+            </div>
+            <div id="loader">
+                <p class="text-center">Loading...</p>
+            </div>
+            <div id="formgroup">
+                <h3>Seller Form</h3>
+      		<form onSubmit="App.submit(); return false;">
+                    <div class="form-group">
+                        <div class="input-group">
+                    	    <p>Item Name</p>
+                    	    <input id="ItemName" class="form-control input-lg" type="text" name="ItemName">
+                    	    <p>Price(in ethers)</p>
+        	    	    <input id="Price" class="form-control input-lg" type="number" name="Price" value="1" min="1" pattern="[0-10000000000000]">
+                    	    <input id="CB" type="checkbox"> Please tick this to proceed!<br>
+                        </div>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary btn-lg">Sell Item</button>
+                    	</span>  
+                    </div>
+                </form>
+		<a href="index.html">
+			<button class="btn btn-primary btn-lg">Back</button><br>
+                </a>
+            </div>
+	</div>
+    </div>
+    <footer class="page-footer font-small special-color-dark pt-4">
+<!-- Footer Elements -->
+<!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="background: rgba(0,0,0,0.5); color:#FFFFFF;">Blockchain Based store
+        <div>
+            <p id="accountAddress" class="text-center"></p>
+        </div>
+    </div>
+<!-- Copyright -->
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app1.js"></script>
+  </body>
+</html>
